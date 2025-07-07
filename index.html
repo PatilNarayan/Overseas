@@ -1,691 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amritva Overseas - Premium Indian Exports</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Amritva Overseas Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-        }
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: linear-gradient(135deg, #ff6b35, #f7931e);
-            padding: 1rem 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-        @keyframes glow {
-            from { text-shadow: 0 0 10px rgba(255,255,255,0.5); }
-            to { text-shadow: 0 0 20px rgba(255,255,255,0.8); }
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            transform: translateY(-2px);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: white;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="800" cy="300" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="400" cy="600" r="4" fill="rgba(255,255,255,0.1)"/><circle cx="700" cy="800" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
-            animation: float 20s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
-            z-index: 2;
-            position: relative;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            animation: slideInUp 1s ease-out;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            animation: slideInUp 1s ease-out 0.3s both;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff6b35, #f7931e);
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            animation: slideInUp 1s ease-out 0.6s both;
-            box-shadow: 0 10px 30px rgba(255,107,53,0.4);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255,107,53,0.6);
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Floating Elements */
-        .floating-element {
-            position: absolute;
-            animation: floatAnimation 6s ease-in-out infinite;
-        }
-
-        .floating-element:nth-child(1) {
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .floating-element:nth-child(2) {
-            top: 60%;
-            right: 15%;
-            animation-delay: 2s;
-        }
-
-        .floating-element:nth-child(3) {
-            bottom: 20%;
-            left: 20%;
-            animation-delay: 4s;
-        }
-
-        @keyframes floatAnimation {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-        }
-
-        /* About Section */
-        .about {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .about-image {
-            text-align: center;
-            position: relative;
-        }
-
-        .about-image::before {
-            content: '🇮🇳';
-            font-size: 8rem;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-
-        /* Products Section */
-        .products {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .product-card:hover::before {
-            left: 100%;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-
-        .product-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
-        .product-card h3 {
-            color: #333;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .product-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Why Choose Us */
-        .why-choose {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-item {
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            animation: rotate 4s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            text-align: center;
-        }
-
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            margin-top: 2rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(102,126,234,0.4);
-        }
-
-        .contact-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(102,126,234,0.6);
-        }
-
-        /* Footer */
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Scroll Animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Stats Counter */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: white;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: rgba(255,255,255,0.8);
-        }
-    </style>
+  <!-- =======================================================
+  * Template Name: Amritva Overseas
+  * Template URL: https://bootstrapmade.com/Amritva Overseas-free-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="#" class="logo">Amritva Overseas</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Amritva Overseas</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
             </ul>
-        </nav>
-    </header>
+          </li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
 
-    <section class="hero" id="home">
-        <div class="floating-element">🌟</div>
-        <div class="floating-element">✨</div>
-        <div class="floating-element">🎯</div>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="about.html">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="assets/imgmy/IMG_5690.JPG" alt="Amritva Overseas">
+          <div class="carousel-container">
+            <h2>Welcome to Amritva Overseas</h2>
+            <p>Amritva Overseas is a trusted and growing export-import firm based in India, specializing in the global trade of high-quality Indian products. We are committed to excellence, sustainability, and authenticity, serving clients worldwide with integrity and professionalism.</p>
+            <a href="#featured-services" class="btn-get-started">Get Started</a>
+          </div>
+        </div><!-- End Carousel Item -->
         
-        <div class="hero-content">
-            <h1>Premium Indian Exports</h1>
-            <p>Connecting India's finest products to the world with authenticity, quality, and trust since 2025</p>
-            <a href="#products" class="cta-button">Explore Our Products</a>
-        </div>
-    </section>
+        <div class="carousel-item">
+          <img src="assets/imgmy/IMG_5689.JPG" alt="Our Vision and Mission">
+          <div class="carousel-container">
+            <h2>Our Vision and Mission</h2>
+            <p>Our vision is to become a globally recognized name in export-import by promoting traditional Indian products. We aim to provide premium goods, build long-term relationships, and empower local artisans through transparent and timely services.</p>
+            <a href="#featured-services" class="btn-get-started">Get Started</a>
+          </div>
+        </div><!-- End Carousel Item -->
+        
+        <div class="carousel-item">
+          <img src="assets/imgmy/IMG_5687.JPG" alt="Our Products">
+          <div class="carousel-container">
+            <h2>Our Products</h2>
+            <p>We offer a diverse range of products including Terry Towels, Indian Spices, Multani Mitti, Cow Dung Products, Handicrafts, and Kolhapuri Chappals. Every item reflects India’s rich culture, crafted with care and delivered with quality assurance.</p>
+            <a href="#featured-services" class="btn-get-started">Get Started</a>
+          </div>
+        </div><!-- End Carousel Item -->
+        
 
-    <section class="about fade-in" id="about">
-        <div class="container">
-            <h2 class="section-title">About Amritva Overseas</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>We are a trusted and growing export-import firm based in India, specializing in the global trade of high-quality Indian products. Our commitment to excellence, sustainability, and authenticity drives every consignment we deliver to clients worldwide.</p>
-                    <br>
-                    <p>Our vision is to become a globally recognized name in the export-import industry by promoting traditional Indian products and ensuring customer satisfaction through reliable service.</p>
-                </div>
-                <div class="about-image">
-                    <div class="stats">
-                        <div class="stat-item">
-                            <span class="stat-number">100+</span>
-                            <span class="stat-label">Happy Clients</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Countries Served</span>
-                        </div>
-                    </div>
-                </div>
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+<section id="about" class="about section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>About</h2>
+    <p>About Us</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+        <p>
+          Amritva Overseas is a trusted and growing export-import firm based in India, specializing in the global trade of high-quality Indian products. We are committed to delivering excellence, sustainability, and authenticity in every consignment, serving clients across the globe with integrity and professionalism.
+        </p>
+        <ul>
+          <li><i class="bi bi-check2-circle"></i> <span>Premium quality products meeting international standards.</span></li>
+          <li><i class="bi bi-check2-circle"></i> <span>Transparent dealings, timely shipments, and customized solutions.</span></li>
+          <li><i class="bi bi-check2-circle"></i> <span>Empowering local artisans and promoting eco-friendly trade.</span></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <p>
+          Our vision is to become a globally recognized and respected name in the export-import industry by promoting traditional Indian products and ensuring customer satisfaction through reliable service. We offer a wide range of products including Terry Towels, Indian Spices, Multani Mitti, Cow Dung Products, Handicrafts, and Kolhapuri Chappals—each crafted with care, sustainability, and attention to detail.
+        </p>
+        <a href="about.html" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /About Section -->
+
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section light-background">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+   <!-- Services Section -->
+<section id="services" class="services section">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item d-flex position-relative h-100">
+          <i class="bi bi-basket icon flex-shrink-0"></i>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">Premium Terry Towels</a></h4>
+            <p class="description">We supply high-quality, soft, and durable terry towels made from 100% cotton, ideal for personal, commercial, and hospitality use. Custom sizes, colors, and GSM ranges are available as per client requirements.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item d-flex position-relative h-100">
+          <i class="bi bi-cup-straw icon flex-shrink-0"></i>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">Authentic Indian Spices</a></h4>
+            <p class="description">We export a wide range of natural and aromatic Indian spices including turmeric, cumin, coriander, black pepper, and more—sourced directly from trusted farmers to ensure purity, flavor, and freshness.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item d-flex position-relative h-100">
+          <i class="bi bi-droplet-half icon flex-shrink-0"></i>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">Multani Mitti (Fuller’s Earth)</a></h4>
+            <p class="description">We offer pure, chemical-free Multani Mitti in both powder and lump forms. Rich in minerals, it is widely used in skincare and cosmetic applications to detoxify skin and enhance beauty naturally.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item d-flex position-relative h-100">
+          <i class="bi bi-fire icon flex-shrink-0"></i>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">Eco-Friendly Cow Dung Products</a></h4>
+            <p class="description">We supply dried cow dung cakes, powders, and incense sticks used for religious rituals, organic farming, and eco-friendly fuel. All products are hygienically processed and safely packaged for global supply.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item d-flex position-relative h-100">
+          <i class="bi bi-gem icon flex-shrink-0"></i>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">Handcrafted Indian Art</a></h4>
+            <p class="description">We promote Indian artisans by exporting beautiful handcrafted items including wooden crafts, decorative pieces, and festival gifts. Every item reflects India’s rich culture, tradition, and skilled craftsmanship.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item d-flex position-relative h-100">
+          <i class="bi bi-bag-heart icon flex-shrink-0"></i>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">Kolhapuri Chappals</a></h4>
+            <p class="description">We bring India’s iconic handcrafted leather Kolhapuri chappals to the world. Known for their durability, comfort, and traditional design, these chappals are perfect for ethnic and modern fashion lovers alike.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Services Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Necessitatibus eius consequatur</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-product">Card</li>
+            <li data-filter=".filter-branding">Web</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/imgmy/0B391B29-249B-45DA-9CE1-3495CF90D7B5.JPG" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/imgmy/11E87981-90E9-4534-BF2B-6CB84007BDDF.JPG" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/imgmy/252711B0-35A0-455D-81DE-B7BA36AA2770.JPG" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Product 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/imgmy/31E5A20C-DEDE-4E6E-9189-DCD8679F0376.JPG" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/imgmy/3D556261-0E7C-4F3A-9D41-F0760B08D080.JPG" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Branding 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/imgmy/4EED989C-12FA-4856-9FA2-8887EF46259C.JPG" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/imgmy/80556ABB-381E-4F97-9EEE-D77E144249ED.JPG" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/imgmy/874B2D75-F314-4DA5-A2F6-B70C503829C1.JPG" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/imgmy/9ECFC561-F693-4509-8913-A648220EA5A5.JPG" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Product 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/imgmy/9ECFC561-F693-4509-8913-A648220EA5A5.JPG" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/imgmy/ABB4573E-DA04-4D13-A221-276B808ECED3.JPG" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Branding 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/imgmy/BF8C0A65-1DA4-4847-9B0E-7453E317211E.JPG" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/imgmy/F362D360-29F5-49A0-869F-278B83A03817.JPG" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/imgmy/F362D360-29F5-49A0-869F-278B83A03817.JPG" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/imgmy/IMG_5687.JPG" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Product 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/imgmy/IMG_5689.JPG" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/imgmy/IMG_5690.JPG" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Branding 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/imgmy/IMG_5690.JPG" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+  </main>
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+  
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Amritva Overseas</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Kolhapur, Maharashtra</p>
+            <p>India - 416003</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 98765 43210</span></p>
+            <p><strong>Email:</strong> <span>contact@amritvaoverseas.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Products</h4>
+          <ul>
+            <li><a href="#">Terry Towels</a></li>
+            <li><a href="#">Indian Spices</a></li>
+            <li><a href="#">Multani Mitti</a></li>
+            <li><a href="#">Cow Dung Products</a></li>
+            <li><a href="#">Handicrafts & Chappals</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe to receive updates on new products, export news, and special offers from Amritva Overseas.</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form">
+              <input type="email" name="email" placeholder="Your Email"><input type="submit" value="Subscribe">
             </div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Thank you for subscribing!</div>
+          </form>
         </div>
-    </section>
+  
+      </div>
+    </div>
+  
+    <div class="container copyright text-center mt-4">
+      <p>© Copyright <strong class="px-1 sitename">Amritva Overseas</strong> All Rights Reserved</p>
+    </div>
+  
+  </footer>
+  
 
-    <section class="products fade-in" id="products">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Our Premium Products</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-icon">🧺</div>
-                    <h3>Terry Towels</h3>
-                    <p>Premium 100% cotton terry towels - soft, absorbent, and durable. Available in various sizes, colors, and GSM ranges for personal, commercial, and hospitality use.</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">🌶️</div>
-                    <h3>Indian Spices</h3>
-                    <p>Pure, natural Indian spices including turmeric, cumin, coriander, and more. Carefully sourced and processed to preserve flavor, aroma, and nutritional value.</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">🏺</div>
-                    <h3>Multani Mitti</h3>
-                    <p>Natural clay rich in minerals, perfect for skincare and cosmetic products. Chemical-free and available in powder and lump forms for beauty treatments.</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">🐄</div>
-                    <h3>Cow Dung Products</h3>
-                    <p>Eco-friendly range including dried cow dung cakes, powder, and incense. Used for religious rituals, organic farming, and sustainable fuel alternatives.</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">🎨</div>
-                    <h3>Handicrafts</h3>
-                    <p>Beautiful handcrafted items made from wood, metal, clay, and natural materials. Each piece reflects India's rich cultural heritage and supports rural artisans.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <section class="why-choose fade-in">
-        <div class="container">
-            <h2 class="section-title">Why Choose Amritva Overseas?</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">✅</div>
-                    <h3>100% Authentic</h3>
-                    <p>High-quality and completely authentic products sourced directly from trusted suppliers</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">💰</div>
-                    <h3>Competitive Pricing</h3>
-                    <p>Best market prices without compromising on quality or service standards</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🚚</div>
-                    <h3>Timely Delivery</h3>
-                    <p>Efficient logistics and timely shipments to ensure your orders reach on time</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📦</div>
-                    <h3>Custom Packaging</h3>
-                    <p>Customized packaging solutions tailored to your specific requirements</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🌱</div>
-                    <h3>Ethical Sourcing</h3>
-                    <p>Eco-conscious practices and ethical sourcing supporting local communities</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🤝</div>
-                    <h3>Trusted Partner</h3>
-                    <p>Building long-term relationships through transparency and professionalism</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
-    <section class="contact fade-in" id="contact">
-        <div class="container">
-            <div class="contact-content">
-                <h2 class="section-title">Ready to Start Trading?</h2>
-                <p>Connect with us today to discuss your requirements and discover how we can help you access premium Indian products for your global markets.</p>
-                <a href="mailto:info@amritva.com" class="contact-button">Get In Touch</a>
-            </div>
-        </div>
-    </section>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Amritva Overseas. All rights reserved. | Promoting Indian Excellence Globally</p>
-        </div>
-    </footer>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Header background change on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 107, 53, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-            } else {
-                header.style.background = 'linear-gradient(135deg, #ff6b35, #f7931e)';
-                header.style.backdropFilter = 'none';
-            }
-        });
-
-        // Animated counter for stats
-        function animateCounter(element, target, duration) {
-            let start = 0;
-            const increment = target / (duration / 16);
-            const timer = setInterval(() => {
-                start += increment;
-                if (start >= target) {
-                    element.textContent = target + '+';
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(start) + '+';
-                }
-            }, 16);
-        }
-
-        // Trigger counter animation when stats section is visible
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const numbers = entry.target.querySelectorAll('.stat-number');
-                    numbers.forEach(number => {
-                        const target = parseInt(number.textContent);
-                        animateCounter(number, target, 2000);
-                    });
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        });
-
-        document.querySelectorAll('.stats').forEach(stats => {
-            statsObserver.observe(stats);
-        });
-
-        // Dynamic background particles
-        function createParticles() {
-            const hero = document.querySelector('.hero');
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.cssText = `
-                    position: absolute;
-                    width: 4px;
-                    height: 4px;
-                    background: rgba(255,255,255,0.1);
-                    border-radius: 50%;
-                    top: ${Math.random() * 100}%;
-                    left: ${Math.random() * 100}%;
-                    animation: particleFloat ${5 + Math.random() * 10}s ease-in-out infinite;
-                    animation-delay: ${Math.random() * 5}s;
-                `;
-                hero.appendChild(particle);
-            }
-        }
-
-        // Add particle animation CSS
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes particleFloat {
-                0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0; }
-                50% { transform: translateY(-100px) translateX(50px); opacity: 1; }
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Initialize particles
-        createParticles();
-    </script>
 </body>
+
 </html>
